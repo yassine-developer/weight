@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts/main.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="login">
+        <div class="header-login">
+            <img src="./img/w8-cropped.png" alt="">
+            <h1>Hej!</h1>
+            <p>Avant tout, merci de nous communiquer les informations suivantes :</p>
+        </div>
+        <div class="user-info">
+            <form action="">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom">
+                <label for="date">Quand êtes-vous né.e ?</label>
+                <input type="date" id="date">
+                <label for="poids">Quel est votre poids (en kg) ?</label>
+                <input type="number" id="poids">
+                <label for="taille">Quel est votre taille (en cm) ?</label>
+                <input type="number" id="taille">
+                <button id="btn-acceuille">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+</body>
+
+</html>
