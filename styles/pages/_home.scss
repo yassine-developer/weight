@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .login {
     position: fixed;
     left: 100px;
@@ -13,6 +17,10 @@
     img {
         width: 100px;
     }
+}
+
+.login.active{
+    transform: translateY(-200%);
 }
 
 .header-login {
@@ -45,8 +53,122 @@
             border: 1px solid #d3d3d3;
         }
 
-        button:hover{
-                background: #b03924;
+        button:hover {
+            background: #b03924;
         }
+    }
+}
+
+.myapp {
+    img {
+        position: absolute;
+        width: 150px;
+        right: 20px;
+        top: 20px;
+        z-index: -1;
+    }
+}
+
+.userInterface {
+    padding: 50px 100px;
+
+    h1 {
+        font-weight: normal;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+
+        span {
+            display: block;
+            font-size: 3.5rem;
+            margin-top: -10px;
+            color: tomato;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+    }
+}
+
+.bmi-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.bmi {
+    border: 1px solid tomato;
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 250px;
+    text-align: center;
+
+    #bmi {
+        color: orange;
+        text-align: center;
+        font-size: 7rem;
+    }
+
+    .bmi_text {
+        text-align: center;
+    }
+
+}
+
+.dailyWeight {
+
+    text-align: center;
+
+    #lastWeight {
+        font-weight: bold;
+        color: tomato;
+    }
+
+    .dailyWeight_text {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+}
+
+.dailyWeight_form {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        position: relative;
+
+        input {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #d3d3d3;
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+        }
+    }
+
+    .btn-ajouter {
+        width: 100%;
+        padding: 15px;
+        border-radius: 3px;
+        margin-top: 10px;
+        background: tomato;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 10px;
+        transition: .3s all ease-in-out;
+    }
+
+    .btn-reset {
+        background: #2f4f4f;
+        color: #fff;
+        width: 100%;
+        padding: 15px;
+        cursor: pointer;
+        transition: .3s all ease-in-out;
     }
 }

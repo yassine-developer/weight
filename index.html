@@ -21,7 +21,7 @@
             <form action="">
                 <label for="prenom">Prénom</label>
                 <input type="text" id="prenom">
-                <label for="date">Quand êtes-vous né.e ?</label>
+                <label for="date">Quand êtes-vous née ?</label>
                 <input type="date" id="date">
                 <label for="poids">Quel est votre poids (en kg) ?</label>
                 <input type="number" id="poids">
@@ -31,8 +31,33 @@
             </form>
         </div>
     </div>
+    <div class="myapp">
+        <img src="./img/w8.png" alt="">
+        <div class="userInterface">
+            <h1>Hello,<span id="helloname"></span><sup>Vous avez <span id="agecalculé"></span> ans.</sup></h1>
+            <div class="bmi-wrapper">
+                <div class="bmi">
+                    <p class="bmi_text">Votre BMI est de</p>
+                    <p id="bmi"></p>
+                    <p class="bmiresult">vous etes en: <span id="verdict"></span></p>
+                </div>
+                <div class="dailyWeight">
+                    <p class="dailyWeight_text">Le dernier poids en notre possession est : <span id="lastWeight"></span></p>
+                    <p class="dailyWeight_text">Entrez votre poids du jour ci-dessous</p>
+                    <div class="dailyWeight_form">
+                        <div>
+                            <input type="number" step="0.1" placeholder="Par ex : 80,68" id="newpoids">
+                            <span>kg</span>
+                        </div>
+                        <button class="btn-ajouter">Envoyer</button>
+                        <button class="btn-reset">Remettre à 0</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div>
-        <canvas id="myChart"></canvas>
+        <canvas id="myChart" width="800" height="500"></canvas>
       </div>
 </body>
 
