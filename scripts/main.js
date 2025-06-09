@@ -28,6 +28,7 @@ function sauvegarderDansLocalStorage() {
         jours: jours
     };
     localStorage.setItem("appData", JSON.stringify(dataToStore));
+    
 }
 
 function calculerBmi(taille, poids) {
@@ -115,7 +116,7 @@ button.addEventListener('click', (e) => {
     lastWeight.textContent = `${userData[0].poids}`;
     bmi.textContent = `${calculerBmi(userData[0].taille, userData[0].poids)}`;
     bmitext.textContent = `${evaluerbmi(calculerBmi(userData[0].taille, weightdata[weightdata.length - 1]))}`;
-    console.log(calculerBmi(userData[0].taille), weightdata[weightdata.length - 1]);
+    console.log( calculerBmi(userData[0].taille, weightdata[weightdata.length - 1]));
     agecalcule.textContent = `${calculerage(userData[0].date)}`;
     displayGraphe();
     sauvegarderDansLocalStorage();
@@ -123,7 +124,8 @@ button.addEventListener('click', (e) => {
 
 
 
-envoyer.addEventListener('click', () => {
+envoyer.addEventListener('click', (e) => {
+    e.preventDefault();
     // mise a jour des varible: i, jours, weightdata.
     i++;
     jours.push(`jour ${i}`);
@@ -132,7 +134,7 @@ envoyer.addEventListener('click', () => {
     lastWeight.textContent = `${dernierpoids()}`;
     bmi.textContent = `${calculerBmi(userData[0].taille, weightdata[weightdata.length - 1])}`;
     bmitext.textContent = `${evaluerbmi(calculerBmi(userData[0].taille, weightdata[weightdata.length - 1]))}`;
-    console.log(calculerBmi(userData[0].taille), weightdata[weightdata.length - 1]);
+    console.log(calculerBmi(userData[0].taille, weightdata[weightdata.length - 1]));
     displayGraphe();
     sauvegarderDansLocalStorage();
 })
@@ -175,7 +177,7 @@ window.onload = () => {
         userData.push(...storedData.userData);
         weightdata.push(...storedData.weightdata);
         jours.push(...storedData.jours);
-
+        i = jours.length;
         login.classList.add("active");
 
         // Affichage des infos récupérées
